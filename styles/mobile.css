@@ -127,14 +127,14 @@
     margin: 4em auto 0 auto;
     justify-content: center;
     align-items: center;
-    padding-top: 3em;
+    padding: 3em 0;
   }
   .header .head-img {
     width: 80%;
     height: 80%;
   }
   .header .head-text h1 {
-    margin: 0.5em 0 0.7em 0;
+    margin: 0.5em 0 0 0;
     font-size: 2rem;
     line-height: 48px;
   }
