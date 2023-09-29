@@ -210,7 +210,7 @@ a {
 .cl-categories {
   display: flex;
   width: 100%;
-  gap: 10em;
+  gap: 6em;
   justify-content: space-between;
   align-items: center;
 }
@@ -306,6 +306,13 @@ a {
 
 .stats .stat {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: auto;
+}
+.stat .image img {
+  width: 100%;
+  margin: 0 0.5em 0 -0.5em;
 }
 .stat .stat-text p:first-child {
   font-size: 28px;
