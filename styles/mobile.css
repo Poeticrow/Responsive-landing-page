@@ -231,11 +231,17 @@
 
   .customers .image {
     flex: 1;
-    width: 35%;
+    width: 45%;
+  }
+  .customers .image img {
+    width: 100%;
   }
 
   .customers .info-text {
     flex: 2;
+  }
+  .customers .client-logos {
+    padding-top: 1.5em;
   }
   /* SECTION: COMMUNITY UPDATES */
   .community .updates {
@@ -244,20 +250,99 @@
     /* justify-content: space-between; */
   }
   .community .updates .update-item {
-    width: 100%;
+    width: 80%;
   }
   .community .updates .update-item img {
     width: 100%;
   }
   .community .updates .item-info {
-    width: 30%;
-    height: 40%;
+    width: 100%;
+    height: fit-content;
     font-size: 14px;
+  }
+  .community .updates .item-info {
+    /* Positioning: ITEM-INFO */
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+
+  /* DEMO */
+  .demo h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  /* FOOTER */
+  footer .foot-nav {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 1em;
   }
 }
 
 @media (max-width: 500px) {
   .navbar-container input[type="checkbox"]:checked ~ .logo {
     display: none;
+  }
+
+  /* stats */
+  .stats-section .stats {
+    grid-template-columns: repeat(1, auto);
+    /* display: none; */
+  }
+  /* CUSTOMERS */
+  .customers .client-logos .cl-logo:nth-child(2),
+  .customers .client-logos .cl-logo:nth-child(4),
+  .customers .client-logos .cl-logo:nth-child(5) {
+    display: none;
+  }
+  .customers .client-logos .cl-logo:last-child {
+    text-align: center;
+  }
+
+  .customers .client-logos {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .customers .client-logos .cl-logo {
+    flex-grow: 1;
+    flex-basis: 200;
+    vertical-align: middle;
+  }
+  /* FOOTER */
+  .demo {
+    margin-top: -1em;
+  }
+  footer .foot-nav {
+    gap: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* grid-template-columns: repeat(2, auto); */
+    width: 100%;
+  }
+  footer .foot-nav .foot-info {
+    /* border-bottom: 1px solid var(--dark-neutral-color);
+    display: block; */
+    padding: 0.5em;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .foot-info .social-media-icons {
+    justify-content: space-between;
+    padding-bottom: 2em;
+    border-bottom: 1px solid var(--dark-neutral-color);
+  }
+  footer .foot-nav .foot-info:first-child .copyright {
+    display: none;
+  }
+  footer .foot-nav .foot-info_mobile {
+    display: block;
+    width: 100%;
   }
 }
